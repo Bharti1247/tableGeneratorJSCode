@@ -1,3 +1,17 @@
 body{
+    width: 60%;
+    margin: auto;
+    border: 5px burlywood solid;
+    text-align: center;
+}
+.inputNum{
     background-color: antiquewhite;
+    padding: 20 px;
+    font-weight: bold;
+}
+.inputNum h2{
+    color: rgb(172, 143, 105);
+}
+.inputNum:hover{
+    background-color: red;
 }
