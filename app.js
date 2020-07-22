@@ -1,24 +1,17 @@
-function createTable()
-{
-    var b,i,x;
-    var a=document.getElementById('a').value;
-    if(a<0 || a==0) alert('Enter a valid number.');
-    else
-    {
-        for(i=1;i<21;i++) {
-            /*{x=a;}
-            else
-            {*/
-                b= parseInt(a)*i;
-                console.log(b);
-                if(i===1) {
-                    x=a+ ' *'+ i +' =' + a+" <br>";
-                } else {
-                    x=a+ ' *'+ i +' =' + x+b+" <br>";    
-                }
-                
-           // }
+function createTable() {
+
+   var num = Number(document.getElementById('a').value); // getting number from UI/ html page.
+
+    if (num < 0 || num == 0) {
+        alert('Enter a valid number & non-negative number.');
+    }
+    else {
+       
+        for (var i = 1; i <= 20; i++) { // for loop to get loop for 20 times.
+            var pTag = document.getElementById('pPrint');//tag id where we have to show tables.
+            pTag.innerHTML += num + ' * ' + i + ' = ' + (num * i) + "<br/>"
+            // pTag.innerHTML = pTag +   num + ' * ' + i + ' = ' + (num * i) + "<br/>" // equivalent as above.
         }
-        document.getElementById("result").innerHTML = x;
+
     }
 }
